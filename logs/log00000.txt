@@ -1,0 +1,209 @@
+
+INCOMING minecraft:intention / 0 packet (17 bytes)
+Set STATE to login
+
+INCOMING minecraft:hello / 0 packet (31 bytes)
+OUTGOING minecraft:login_finished / 2 packet (43 bytes)
+
+INCOMING minecraft:login_acknowledged / 3 packet (2 bytes)
+Set STATE to configuration
+
+INCOMING minecraft:custom_payload / 2 packet (26 bytes)
+OUTGOING minecraft:select_known_packs / 14 packet (25 bytes)
+
+INCOMING minecraft:client_information / 0 packet (16 bytes)
+
+INCOMING minecraft:select_known_packs / 7 packet (25 bytes)
+OUTGOING minecraft:registry_data / 7 packet (119 bytes)
+OUTGOING minecraft:registry_data / 7 packet (148 bytes)
+OUTGOING minecraft:registry_data / 7 packet (136 bytes)
+OUTGOING minecraft:registry_data / 7 packet (6148 bytes)
+OUTGOING minecraft:registry_data / 7 packet (494 bytes)
+OUTGOING minecraft:registry_data / 7 packet (213 bytes)
+OUTGOING minecraft:registry_data / 7 packet (245 bytes)
+OUTGOING minecraft:registry_data / 7 packet (217 bytes)
+OUTGOING minecraft:registry_data / 7 packet (346 bytes)
+OUTGOING minecraft:registry_data / 7 packet (329 bytes)
+OUTGOING minecraft:registry_data / 7 packet (3021 bytes)
+OUTGOING minecraft:finish_configuration / 3 packet (2 bytes)
+
+INCOMING minecraft:finish_configuration / 3 packet (2 bytes)
+Set STATE to play
+OUTGOING minecraft:login / 43 packet (72 bytes)
+OUTGOING minecraft:game_event / 34 packet (7 bytes)
+OUTGOING minecraft:level_chunk_with_light / 39 packet (107692 bytes)
+OUTGOING minecraft:level_chunk_with_light / 39 packet (107692 bytes)
+OUTGOING minecraft:level_chunk_with_light / 39 packet (107692 bytes)
+OUTGOING minecraft:level_chunk_with_light / 39 packet (107692 bytes)
+OUTGOING minecraft:level_chunk_with_light / 39 packet (107692 bytes)
+OUTGOING minecraft:level_chunk_with_light / 39 packet (107692 bytes)
+OUTGOING minecraft:level_chunk_with_light / 39 packet (107692 bytes)
+OUTGOING minecraft:level_chunk_with_light / 39 packet (107692 bytes)
+OUTGOING minecraft:level_chunk_with_light / 39 packet (107692 bytes)
+OUTGOING minecraft:level_chunk_with_light / 39 packet (107692 bytes)
+OUTGOING minecraft:level_chunk_with_light / 39 packet (107692 bytes)
+OUTGOING minecraft:level_chunk_with_light / 39 packet (107692 bytes)
+OUTGOING minecraft:level_chunk_with_light / 39 packet (107692 bytes)
+OUTGOING minecraft:level_chunk_with_light / 39 packet (107692 bytes)
+OUTGOING minecraft:level_chunk_with_light / 39 packet (107692 bytes)
+OUTGOING minecraft:level_chunk_with_light / 39 packet (107692 bytes)
+OUTGOING minecraft:level_chunk_with_light / 39 packet (107692 bytes)
+OUTGOING minecraft:level_chunk_with_light / 39 packet (107692 bytes)
+OUTGOING minecraft:level_chunk_with_light / 39 packet (107692 bytes)
+OUTGOING minecraft:level_chunk_with_light / 39 packet (107692 bytes)
+OUTGOING minecraft:level_chunk_with_light / 39 packet (107692 bytes)
+OUTGOING minecraft:level_chunk_with_light / 39 packet (107692 bytes)
+OUTGOING minecraft:level_chunk_with_light / 39 packet (107692 bytes)
+OUTGOING minecraft:level_chunk_with_light / 39 packet (107692 bytes)
+OUTGOING minecraft:level_chunk_with_light / 39 packet (107692 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+INCOMING minecraft:player_loaded / 43 packet (2 bytes)
+INCOMING minecraft:move_player_rot / 31 packet (11 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+INCOMING minecraft:move_player_pos_rot / 30 packet (35 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+INCOMING minecraft:move_player_pos_rot / 30 packet (35 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+INCOMING minecraft:move_player_pos / 29 packet (27 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+INCOMING minecraft:move_player_pos / 29 packet (27 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+INCOMING minecraft:move_player_pos / 29 packet (27 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+INCOMING minecraft:move_player_pos / 29 packet (27 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+INCOMING minecraft:move_player_pos / 29 packet (27 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+INCOMING minecraft:move_player_pos / 29 packet (27 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+INCOMING minecraft:move_player_pos / 29 packet (27 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+INCOMING minecraft:move_player_pos / 29 packet (27 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+INCOMING minecraft:move_player_pos / 29 packet (27 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+INCOMING minecraft:move_player_pos / 29 packet (27 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+INCOMING minecraft:move_player_pos / 29 packet (27 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+INCOMING minecraft:move_player_pos / 29 packet (27 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+INCOMING minecraft:move_player_pos / 29 packet (27 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+INCOMING minecraft:move_player_pos / 29 packet (27 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+INCOMING minecraft:move_player_pos / 29 packet (27 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+INCOMING minecraft:move_player_pos / 29 packet (27 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+INCOMING minecraft:move_player_pos / 29 packet (27 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+INCOMING minecraft:move_player_pos / 29 packet (27 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+INCOMING minecraft:move_player_pos / 29 packet (27 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+INCOMING minecraft:move_player_pos / 29 packet (27 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+INCOMING minecraft:move_player_pos / 29 packet (27 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+INCOMING minecraft:move_player_pos_rot / 30 packet (35 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+INCOMING minecraft:move_player_pos / 29 packet (27 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+INCOMING minecraft:move_player_pos / 29 packet (27 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+INCOMING minecraft:move_player_pos / 29 packet (27 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+INCOMING minecraft:move_player_pos / 29 packet (27 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+INCOMING minecraft:move_player_pos / 29 packet (27 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+INCOMING minecraft:move_player_pos / 29 packet (27 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+INCOMING minecraft:move_player_pos / 29 packet (27 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+INCOMING minecraft:move_player_pos / 29 packet (27 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+INCOMING minecraft:move_player_pos / 29 packet (27 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+INCOMING minecraft:move_player_pos / 29 packet (27 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+INCOMING minecraft:move_player_pos / 29 packet (27 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+INCOMING minecraft:move_player_pos / 29 packet (27 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+INCOMING minecraft:move_player_pos / 29 packet (27 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+INCOMING minecraft:move_player_pos / 29 packet (27 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+INCOMING minecraft:move_player_pos / 29 packet (27 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+
+INCOMING minecraft:client_tick_end / 12 packet (2 bytes)
+
+Closed Socket in state play

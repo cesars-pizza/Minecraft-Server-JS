@@ -1,0 +1,20 @@
+{
+    "version": {
+        "name": "1.21.8",
+        "protocol": 772
+    },
+    "players": {
+        "max": 999999,
+        "online": -1,
+        "sample": [
+            {
+                "name": "§kLoompyDoompy",
+                "id": "b62eddda-01d9-4049-8cd2-e79e38741c65"
+            }
+        ]
+    },
+    "description": {
+        "text": "§4§kAHHHHHHHHH"
+    },
+    "enforcesSecureChat": false
+}

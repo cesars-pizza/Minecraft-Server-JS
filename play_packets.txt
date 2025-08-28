@@ -1,0 +1,206 @@
+Clientbound:
+(000) Bundle Delimiter: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Bundle_Delimiter
+(001) Spawn Entity: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Spawn_Entity
+(002) Entity Animation: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Entity_Animation
+(003) Award Statistics: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Award_Statistics
+(004) Acknowledge Block Change: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Acknowledge_Block_Change
+(005) Set Block Destroy Stage: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Set_Block_Destroy_Stage
+(006) Block Entity Data: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Block_Entity_Data
+(007) Block Action: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Block_Action
+(008) Block Update: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Block_Update
+(009) Boss Bar: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Boss_Bar
+(010) Change Difficulty: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Change_Difficulty
+(011) Chunk Batch Finished: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Chunk_Batch_Finished
+(012) Chunk Batch Start: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Chunk_Batch_Start
+(013) Chunk Biomes: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Chunk_Biomes
+(014) Clear Titles: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Clear_Titles
+(015) Command Suggestions Response: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Command_Suggestions_Response
+(016) Commands: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Commands
+(017) Close Container: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Close_Container
+(018) Set Container Content: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Set_Container_Content
+(019) Set Container Property: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Set_Container_Property
+(020) Set Container Slot: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Set_Container_Slot
+(021) Cookie Request (play): https://minecraft.wiki/w/Java_Edition_protocol/Packets#Cookie_Request_(play)
+(022) Set Cooldown: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Set_Cooldown
+(023) Chat Suggestions: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Chat_Suggestions
+(024) Clientbound Plugin Message (play): https://minecraft.wiki/w/Java_Edition_protocol/Packets#Clientbound_Plugin_Message_(play)
+(025) Damage Event: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Damage_Event
+(026) Debug Sample: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Debug_Sample
+(027) Delete Message: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Delete_Message
+(028) Disconnect (play): https://minecraft.wiki/w/Java_Edition_protocol/Packets#Disconnect_(play)
+(029) Disguised Chat Message: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Disguised_Chat_Message
+(030) Entity Event: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Entity_Event
+(031) Teleport Entity: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Teleport_Entity
+(032) Explosion: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Explosion
+(033) Unload Chunk: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Unload_Chunk
+(034) *Game Event: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Game_Event
+(035) Open Horse Screen: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Open_Horse_Screen
+(036) Hurt Animation: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Hurt_Animation
+(037) Initialize World Border: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Initialize_World_Border
+(038) Clientbound Keep Alive (play): https://minecraft.wiki/w/Java_Edition_protocol/Packets#Clientbound_Keep_Alive_(play)
+(039) *Chunk Data and Update Light: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Chunk_Data_and_Update_Light
+(040) World Event: https://minecraft.wiki/w/Java_Edition_protocol/Packets#World_Event
+(041) Particle: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Particle
+(042) Update Light: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Update_Light
+(043) *Login (play): https://minecraft.wiki/w/Java_Edition_protocol/Packets#Login_(play)
+(044) Map Data: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Map_Data
+(045) Merchant Offers: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Merchant_Offers
+(046) Update Entity Position: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Update_Entity_Position
+(047) Update Entity Position and Rotation: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Update_Entity_Position_and_Rotation
+(048) Move Minecart Along Track: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Move_Minecart_Along_Track
+(049) Update Entity Rotation: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Update_Entity_Rotation
+(050) Move Vehicle: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Move_Vehicle
+(051) Open Book: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Open_Book
+(052) Open Screen: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Open_Screen
+(053) Open Sign Editor: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Open_Sign_Editor
+(054) Ping (play): https://minecraft.wiki/w/Java_Edition_protocol/Packets#Ping_(play)
+(055) Ping Response (play): https://minecraft.wiki/w/Java_Edition_protocol/Packets#Ping_Response_(play)
+(056) Place Ghost Recipe: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Place_Ghost_Recipe
+(057) Player Abilities (clientbound): https://minecraft.wiki/w/Java_Edition_protocol/Packets#Player_Abilities_(clientbound)
+(058) Player Chat Message: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Player_Chat_Message
+(059) End Combat: https://minecraft.wiki/w/Java_Edition_protocol/Packets#End_Combat
+(060) Enter Combat: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Enter_Combat
+(061) Combat Death: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Combat_Death
+(062) Player Info Remove: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Player_Info_Remove
+(063) Player Info Update: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Player_Info_Update
+(064) Look At: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Look_At
+(065) *Synchronize Player Position: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Synchronize_Player_Position
+(066) Player Rotation: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Player_Rotation
+(067) Recipe Book Add: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Recipe_Book_Add
+(068) Recipe Book Remove: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Recipe_Book_Remove
+(069) Recipe Book Settings: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Recipe_Book_Settings
+(070) Remove Entities: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Remove_Entities
+(071) Remove Entity Effect: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Remove_Entity_Effect
+(072) Reset Score: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Reset_Score
+(073) Remove Resource Pack (play): https://minecraft.wiki/w/Java_Edition_protocol/Packets#Remove_Resource_Pack_(play)
+(074) Add Resource Pack (play): https://minecraft.wiki/w/Java_Edition_protocol/Packets#Add_Resource_Pack_(play)
+(075) Respawn: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Respawn
+(076) Set Head Rotation: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Set_Head_Rotation
+(077) Update Section Blocks: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Update_Section_Blocks
+(078) Select Advancements Tab: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Select_Advancements_Tab
+(079) Server Data: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Server_Data
+(080) Set Action Bar Text: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Set_Action_Bar_Text
+(081) Set Border Center: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Set_Border_Center
+(082) Set Border Lerp Size: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Set_Border_Lerp_Size
+(083) Set Border Size: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Set_Border_Size
+(084) Set Border Warning Delay: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Set_Border_Warning_Delay
+(085) Set Border Warning Distance: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Set_Border_Warning_Distance
+(086) Set Camera: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Set_Camera
+(087) Set Center Chunk: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Set_Center_Chunk
+(088) Set Render Distance: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Set_Render_Distance
+(089) Set Cursor Item: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Set_Cursor_Item
+(090) Set Default Spawn Position: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Set_Default_Spawn_Position
+(091) Display Objective: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Display_Objective
+(092) Set Entity Metadata: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Set_Entity_Metadata
+(093) Link Entities: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Link_Entities
+(094) Set Entity Velocity: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Set_Entity_Velocity
+(095) Set Equipment: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Set_Equipment
+(096) Set Experience: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Set_Experience
+(097) Set Health: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Set_Health
+(098) Set Held Item (clientbound): https://minecraft.wiki/w/Java_Edition_protocol/Packets#Set_Held_Item_(clientbound)
+(099) Update Objectives: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Update_Objectives
+(100) Set Passengers: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Set_Passengers
+(101) Set Player Inventory Slot: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Set_Player_Inventory_Slot
+(102) Update Teams: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Update_Teams
+(103) Update Score: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Update_Score
+(104) Set Simulation Distance: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Set_Simulation_Distance
+(105) Set Subtitle Text: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Set_Subtitle_Text
+(106) Update Time: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Update_Time
+(107) Set Title Text: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Set_Title_Text
+(108) Set Title Animation Times: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Set_Title_Animation_Times
+(109) Entity Sound Effect: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Entity_Sound_Effect
+(110) Sound Effect: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Sound_Effect
+(111) Start Configuration: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Start_Configuration
+(112) Stop Sound: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Stop_Sound
+(113) Store Cookie (play): https://minecraft.wiki/w/Java_Edition_protocol/Packets#Store_Cookie_(play)
+(114) *System Chat Message: https://minecraft.wiki/w/Java_Edition_protocol/Packets#System_Chat_Message
+(115) Set Tab List Header And Footer: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Set_Tab_List_Header_And_Footer
+(116) Tag Query Response: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Tag_Query_Response
+(117) Pickup Item: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Pickup_Item
+(118) Synchronize Vehicle Position: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Synchronize_Vehicle_Position
+(119) Test Instance Block Status: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Test_Instance_Block_Status
+(120) Set Ticking State: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Set_Ticking_State
+(121) Step Tick: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Step_Tick
+(122) *Transfer (play): https://minecraft.wiki/w/Java_Edition_protocol/Packets#Transfer_(play)
+(123) Update Advancements: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Update_Advancements
+(124) Update Attributes: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Update_Attributes
+(125) Entity Effect: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Entity_Effect
+(126) Update Recipes: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Update_Recipes
+(127) Update Tags (play): https://minecraft.wiki/w/Java_Edition_protocol/Packets#Update_Tags_(play)
+(128) Projectile Power: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Projectile_Power
+(129) Custom Report Details: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Custom_Report_Details
+(130) Server Links: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Server_Links
+(131) Waypoint: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Waypoint
+(132) Clear Dialog (play): https://minecraft.wiki/w/Java_Edition_protocol/Packets#Clear_Dialog_(play)
+(133) Show Dialog (play): https://minecraft.wiki/w/Java_Edition_protocol/Packets#Show_Dialog_(play)
+
+Serverbound:
+(000) *Confirm Teleportation: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Confirm_Teleportation
+(001) Query Block Entity Tag: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Query_Block_Entity_Tag
+(002) Bundle Item Selected: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Bundle_Item_Selected
+(003) Change Difficulty: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Change_Difficulty_2
+(004) Change Game Mode: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Change_Game_Mode
+(005) Acknowledge Message: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Acknowledge_Message
+(006) Chat Command: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Chat_Command
+(007) Signed Chat Command: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Signed_Chat_Command
+(008) *Chat Message: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Chat_Message
+(009) Player Session: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Player_Session
+(010) Chunk Batch Received: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Chunk_Batch_Received
+(011) Client Status: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Client_Status
+(012) *Client Tick End: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Client_Tick_End
+(013) Client Information (play): https://minecraft.wiki/w/Java_Edition_protocol/Packets#Client_Information_(play)
+(014) Command Suggestions Request: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Command_Suggestions_Request
+(015) Acknowledge Configuration: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Acknowledge_Configuration
+(016) Click Container Button: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Click_Container_Button
+(017) Click Container: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Click_Container
+(018) *Close Container: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Close_Container_2
+(019) Change Container Slot State: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Change_Container_Slot_State
+(020) Cookie Response (play): https://minecraft.wiki/w/Java_Edition_protocol/Packets#Cookie_Response_(play)
+(021) Serverbound Plugin Message (play): https://minecraft.wiki/w/Java_Edition_protocol/Packets#Serverbound_Plugin_Message_(play)
+(022) Debug Sample Subscription: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Debug_Sample_Subscription
+(023) Edit Book: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Edit_Book
+(024) Query Entity Tag: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Query_Entity_Tag
+(025) Interact: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Interact
+(026) Jigsaw Generate: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Jigsaw_Generate
+(027) *Serverbound Keep Alive (play): https://minecraft.wiki/w/Java_Edition_protocol/Packets#Serverbound_Keep_Alive_(play)
+(028) Lock Difficulty: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Lock_Difficulty
+(029) *Set Player Position: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Set_Player_Position
+(030) *Set Player Position and Rotation: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Set_Player_Position_and_Rotation
+(031) *Set Player Rotation: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Set_Player_Rotation
+(032) *Set Player Movement Flags: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Set_Player_Movement_Flags
+(033) Move Vehicle: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Move_Vehicle_2
+(034) Paddle Boat: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Paddle_Boat
+(035) Pick Item From Block: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Pick_Item_From_Block
+(036) Pick Item From Entity: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Pick_Item_From_Entity
+(037) *Ping Request (play): https://minecraft.wiki/w/Java_Edition_protocol/Packets#Ping_Request_(play)
+(038) Place Recipe: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Place_Recipe
+(039) *Player Abilities (serverbound): https://minecraft.wiki/w/Java_Edition_protocol/Packets#Player_Abilities_(serverbound)
+(040) Player Action: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Player_Action
+(041) *Player Command: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Player_Command
+(042) *Player Input: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Player_Input
+(043) Player Loaded: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Player_Loaded
+(044) Pong (play): https://minecraft.wiki/w/Java_Edition_protocol/Packets#Pong_(play)
+(045) Change Recipe Book Settings: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Change_Recipe_Book_Settings
+(046) Set Seen Recipe: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Set_Seen_Recipe
+(047) Rename Item: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Rename_Item
+(048) Resource Pack Response (play): https://minecraft.wiki/w/Java_Edition_protocol/Packets#Resource_Pack_Response_(play)
+(049) Seen Advancements: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Seen_Advancements
+(050) Select Trade: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Select_Trade
+(051) Set Beacon Effect: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Set_Beacon_Effect
+(052) *Set Held Item (serverbound): https://minecraft.wiki/w/Java_Edition_protocol/Packets#Set_Held_Item_(serverbound)
+(053) Program Command Block: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Program_Command_Block
+(054) Program Command Block Minecart: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Program_Command_Block_Minecart
+(055) *Set Creative Mode Slot: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Set_Creative_Mode_Slot
+(056) Program Jigsaw Block: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Program_Jigsaw_Block
+(057) Program Structure Block: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Program_Structure_Block
+(058) Set Test Block: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Set_Test_Block
+(059) Update Sign: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Update_Sign
+(060) *Swing Arm: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Swing_Arm
+(061) Teleport To Entity: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Teleport_To_Entity
+(062) Test Instance Block Action: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Test_Instance_Block_Action
+(063) *Use Item On: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Use_Item_On
+(064) Use Item: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Use_Item
+(065) Custom Click Action (play): https://minecraft.wiki/w/Java_Edition_protocol/Packets#Custom_Click_Action_(play)
+
+Data:
+Position: https://minecraft.wiki/w/Java_Edition_protocol/Packets#Type:Position
