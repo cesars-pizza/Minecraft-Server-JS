@@ -19,6 +19,7 @@ function WriteVarInt(value) {
     var bytes = []
 
     if (typeof(value) == "number") {
+        value = Math.round(value)
         while (true) {
             if ((value & ~0x7F) == 0) {
                 bytes.push(value)

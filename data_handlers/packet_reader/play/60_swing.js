@@ -40,6 +40,14 @@ function read(data, length, socket, state) {
                 nbt.WriteString("type", "text"),
                 nbt.WriteString("text", `Started player creation`),
             ]), true)
+        } else if (heldItem == "minecraft:name_tag") {
+            packetWriter.play.waypoint.track.buffer(socket, socket.tick.toString(), "String", "minecraft:default", {r: Math.floor(Math.random() * 256), g: Math.floor(Math.random() * 256), b: Math.floor(Math.random() * 256)}, socket.playerPos)
+            socket.waypoints.push(socket.tick.toString())
+        } else if (heldItem == "minecraft:armor_stand") {
+            for (var i = 0; i < socket.waypoints.length; i++) {
+                packetWriter.play.waypoint.untrack.buffer(socket, socket.waypoints[i], "String")
+            }
+            socket.waypoints = []
         }
     } else if (socket.playerInventory.selected_inventory == "createPlayer") {
         if (socket.playerInventory.selected_slot_create_player == 36) {

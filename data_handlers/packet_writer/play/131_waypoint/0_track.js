@@ -33,7 +33,7 @@ function get(id, idType, iconStyle, color, position) {
         else data = data.concat(writer.WriteBool(true), writer.WriteUUID(id))
     } else data = data.concat(writer.WriteBool(false), writer.WriteString(id))
 
-    data.concat(writer.WriteIdentifier(iconStyle))
+    data = data.concat(writer.WriteIdentifier(iconStyle))
 
     if (color == null || color == undefined) data = data.concat(writer.WriteBool(false))
     else data = data.concat(writer.WriteBool(true), writer.WriteUByte(color.r), writer.WriteUByte(color.g), writer.WriteUByte(color.b))
@@ -41,6 +41,8 @@ function get(id, idType, iconStyle, color, position) {
     if (position.y != null && position.y != undefined) data = data.concat(writer.WriteVarInt(1), writer.WriteVarInt(position.x), writer.WriteVarInt(position.y), writer.WriteVarInt(position.z))
     else if (position.angle != null && position.angle != undefined) data = data.concat(writer.WriteVarInt(3), writer.WriteVarInt(position.angle))
     else data = data.concat(writer.WriteVarInt(2), writer.WriteVarInt(position.x), writer.WriteVarInt(position.z))
+
+    return data
 }
 
 module.exports = {write, buffer}

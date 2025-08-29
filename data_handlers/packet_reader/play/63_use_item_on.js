@@ -72,16 +72,6 @@ function read(data, length, socket, state) {
                 }
             }
         } else packetWriter.play.block_update.buffer(socket, location.value.x, location.value.y, location.value.z, registryReader.getItemFromID(heldItemID))
-
-        if (heldItemID == registryReader.getItemID("minecraft:name_tag")) {
-            packetWriter.play.waypoint.track.buffer(socket, socket.tick.toString(), "String", "minecraft:default", {r: Math.floor(Math.random() * 256), g: Math.floor(Math.random() * 256), b: Math.floor(Math.random() * 256)}, location.value)
-            socket.waypoints.push(socket.tick.toString())
-        } else if (heldItemID == registryReader.getItemID("minecraft:armor_stand")) {
-            for (var i = 0; i < socket.waypoints.length; i++) {
-                packetWriter.play.waypoint.untrack.buffer(socket, socket.waypoints[i], "String")
-            }
-            socket.waypoints = []
-        }
     }
 }
 module.exports = {read}

@@ -27,7 +27,9 @@ function get(id, idType) {
         else data = data.concat(writer.WriteBool(true), writer.WriteUUID(id))
     } else data = data.concat(writer.WriteBool(false), writer.WriteString(id))
 
-    data.concat(writer.WriteIdentifier("minecraft:default"), writer.WriteBool(false), writer.WriteVarInt(0))
+    data = data.concat(writer.WriteIdentifier("minecraft:default"), writer.WriteBool(false), writer.WriteVarInt(0))
+
+    return data
 }
 
 module.exports = {write, buffer}

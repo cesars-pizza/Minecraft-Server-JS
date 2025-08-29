@@ -63,12 +63,10 @@ This block placing feature has been extended to a few items as well:
 ## Item Actions
 
 ### Name Tag
-Right clicking a block with the name tag in hand will cause a waypoint to be added at the players position.
-
-This will be changed to left click.
+Left clicking with a name tag in hand will cause a waypoint to be added at the players position.
 
 ### Armor Stand
-Right clicking a block with the armor stand in hand will cause all waypoints to be removed.
+Left clicking with an armor stand in hand will cause all waypoints to be removed.
 
 This will be changed to left click.
 
