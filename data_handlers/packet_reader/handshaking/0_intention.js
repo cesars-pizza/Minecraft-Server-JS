@@ -29,13 +29,10 @@ function read(data, length, socket, state) {
             }
         } else if (protocolVersion.value > 772) {
             socket.log("Unknown Protocol Version " + protocolVersion.value)
-            if (protocolVersion.value < 770) packetWriter.login.login_disconnect.write(socket, `{"text":"Outdated Server: 772 (client on ${protocolVersion.value})"}`)
-            else {
-                packetWriter.login.login_disconnect.write(socket, nbt.WriteNBT([
-                    nbt.WriteString("type", "text"),
-                    nbt.WriteString("text", `Outdated Server: 772 (client on ${protocolVersion.value})`),
-                ]))
-            }
+            packetWriter.login.login_disconnect.write(socket, nbt.WriteNBT([
+                nbt.WriteString("type", "text"),
+                nbt.WriteString("text", `Outdated Server: 772 (client on ${protocolVersion.value})`),
+            ]))
         }
     }
     else socket.log(`Unknown Intent: ${intent.value}`)

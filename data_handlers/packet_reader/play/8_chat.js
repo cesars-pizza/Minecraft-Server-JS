@@ -14,7 +14,7 @@ function read(data, length, socket, state) {
     var messageCoors = message.value.split(', ').map((value) => {return Number(value)})
 
     if (message.value == 'new') {
-        socket.bufferPacket(0x27, "minecraft:level_chunk_with_light", chunkPacketHelper.CreatePlatformChunk(0, 0, -64, 16, 1 + Math.floor(Math.random() * 27000), 15))
+        socket.bufferPacket(0x27, "minecraft:level_chunk_with_light", chunkPacketHelper.CreatePlatformChunk(0, 0, -64, 16, 1 + Math.floor(Math.random() * registryReader.getBlockStateIDMax() + 1), 15))
         socket.markLoadedChunk(0, 0)
     } else if (message.value == 'load all') {
         var loadSize = Math.ceil(Math.sqrt(Math.ceil((registryReader.getBlockStateIDMax() + 1) / 256)))
