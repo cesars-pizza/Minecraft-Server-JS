@@ -4,6 +4,7 @@ const reader = require('./data_handlers/data_reader.js')
 const writer = require('./data_handlers/data_writer.js')
 const registry_reader = require('./data_handlers/registry_reader.js')
 const packetReader = require('./data_handlers/packet_reader/class.js')
+const debug = require('./debug/debug.js')
 const { Socket } = require('./data_structures.js')
 
 var socketIndex = 0
@@ -29,13 +30,13 @@ const server = net.createServer((socket) => {
     socket.writePacket = (id, identifier, data, logBytes, consoleLog) => {
         var packet = writer.CreatePacket(id, data)
         if (consoleLog != false) socket.log(`OUTGOING ${identifier} / ${id} packet (${packet.length} bytes)`)
-        if (logBytes) socket.log(reader.DebugByteArrayNumbers(packet))
+        if (logBytes) socket.log(debug.DebugByteArrayNumbers(packet))
         socket.write(packet, consoleLog)
     }
     socket.writeEmptyPacket = (id, identifier, logBytes, consoleLog) => {
         var packet = writer.CreateEmptyPacket(id)
         if (consoleLog != false) socket.log(`OUTGOING ${identifier} / ${id} packet (${packet.length} bytes)`)
-        if (logBytes) socket.log(reader.DebugByteArrayNumbers(packet))
+        if (logBytes) socket.log(debug.DebugByteArrayNumbers(packet))
         socket.write(packet, consoleLog)
     }
     socket.bufferPacket = (id, identifier, data, logBytes, consoleLog) => {

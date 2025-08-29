@@ -53,26 +53,6 @@ function ReadPrefixedByteArray(data, position) {
     return {length: length.length + length.value, nextPos: length.nextPos + length.value, value: arrayData}
 }
 
-function LogByteArray(data) {
-    var message = ""
-    for (var i = 0; i < data.length; i++) {
-        message += Number(data[i]).toString() + " "
-    }
-    console.log(message)
-}
-
-function DebugByteArrayNumbers(data) {
-    var message = ""
-    for (var i = 0; i < data.length; i++) {
-        message += Number(data[i]).toString() + " "
-    }
-    return message
-}
-
-function DebugByteArrayString(data) {
-    return Buffer.from(new Uint8Array(data)).toString()
-}
-
 function ReadByte(data, position) {
     value = data[position]
     if (value >= 128) value -= 256
@@ -144,4 +124,4 @@ function ReadPosition(data, position) {
     return {length: 8, nextPos: position + 8, value: {x: x, y: y, z: z}}
 }
 
-module.exports = {ReadPosition, ReadSlot, ReadShort, ReadFloat, ReadDouble, DebugByteArrayString, DebugByteArrayNumbers, ReadIdentifier, ReadVarInt, ReadString, ReadUShort, LogByteArray, ReadLong, ReadUUID, ReadPrefixedByteArray, ReadByte, ReadUByte, ReadBool}
+module.exports = {ReadPosition, ReadSlot, ReadShort, ReadFloat, ReadDouble, ReadIdentifier, ReadVarInt, ReadString, ReadUShort, ReadLong, ReadUUID, ReadPrefixedByteArray, ReadByte, ReadUByte, ReadBool}
