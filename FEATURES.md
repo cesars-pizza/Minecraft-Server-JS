@@ -120,6 +120,10 @@ The default name is minecraft:zombie.
 ### Diamond
 Left clicking this item will complete the animation and you will see the animated NPC moving around at a constant speed through the markers.
 
+If there are 0 animation markers, it will spawn an unmoving statue at the player's position
+
+If there is 1 animation marker or multiple animation markers within a small enough distance, it will spawn an unmoving marker at the position of the first marker.
+
 This will also reset your inventory to its original state.
 
 ## Debug
