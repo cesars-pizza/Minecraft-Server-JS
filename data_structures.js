@@ -20,8 +20,9 @@ class Socket {
      * @param {(x: number, z: number) => boolean} getChunkLoaded 
      * @param {string[]} waypoints 
      * @param {{marker_entities: bigint[], markers: {x: number, y: number, z: number, pitch: number, yaw: number, distance: number}[], name: string, selected_speed: number, speeds: number[], total_distance: number}} createPlayerSettings 
+     * @param {{frames: {x: number | null, y: number | null, z: number | null, pitch: number | null, yaw: number | null, changedPos: boolean, changedRot: boolean}[], name: string, id: bigint, copies: number[]}[]} npcPlayers 
      */
-    constructor(state, tick, logText, index, log, writePacket, writeEmptyPacket, bufferPacket, bufferEmptyPacket, writeBufferedPackets, setState, playerPos, playerInventory, bufferedPackets, loadAll, loadedChunks, markLoadedChunk, getChunkLoaded, waypoints, createPlayerSettings) {
+    constructor(state, tick, logText, index, log, writePacket, writeEmptyPacket, bufferPacket, bufferEmptyPacket, writeBufferedPackets, setState, playerPos, playerInventory, bufferedPackets, loadAll, loadedChunks, markLoadedChunk, getChunkLoaded, waypoints, createPlayerSettings, npcPlayers) {
         this.state = state
         this.tick = tick
         this.logText = logText
@@ -42,6 +43,7 @@ class Socket {
         this.getChunkLoaded = getChunkLoaded
         this.waypoints = waypoints
         this.createPlayerSettings = createPlayerSettings
+        this.npcPlayers = npcPlayers
     }
 }
 

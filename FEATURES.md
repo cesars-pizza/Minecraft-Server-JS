@@ -73,12 +73,18 @@ This will be changed to left click.
 ### Diamond
 Left clicking with a diamond in hand will open the player creation menu. See details below.
 
+### Gunpowder
+Left clicking with gunpowder in hand will remove the last made NPC.
+
+### Redstone Dust
+Left clicking with redstone dust in hand will remove all NPCs.
+
 ## Player Creation
 
 ### General
-Left clicking with a diamond in hand will open the player creation menu. It will replace all items in the hotbar with 7 items.
+Left clicking with a diamond in hand will enter NPC creation mode. It will replace all items in the hotbar with 7 items for NPC creation.
 
-Trying to replace the items in your hotbar while in player creation mode will simply replace them again with the items for player creation.
+Trying to replace the items in your hotbar while in NPC creation mode will simply replace them again with the items for NPC creation.
 
 ### Stick
 Left clicking this item will cause an armor stand to appear at the players position. This is an animation marker.
@@ -100,19 +106,19 @@ Left clicking this item will cycle between animation speeds ranging from 0.25 to
 The selected speed is displayed in the actionbar for a couple seconds before fading away.
 
 ### Name Tag
-Left clicking this item will open a sign editor screen. This is used to rename the player that is spawned.
+Left clicking this item will open a sign editor screen. This is used to rename the NPC that is spawned.
 
 If the name is set to the identifier of an entity of than the player (eg. minecraft:pig) it will spawn that entity instead of a player with that name.
 See [Minecraft Wiki - Java edition data values](https://minecraft.wiki/w/Java_Edition_data_values#Entities) for a list of entity identifiers without the "minecraft:" prefix.
 
-The name of a player must be 16 characters or less. There can not be two players with the same name, all duplicates will simply be invisible. This does not apply to non-player entities.
+The name of a player NPC must be 16 characters or less. There can not be two player NPCs with the same name, all duplicates will simply be invisible. This does not apply to non-player NPCs.
 
 Exiting the sign menu sets the name to whatever is typed into the sign. If the sign is blank, the action is simply cancelled.
 
 The default name is minecraft:zombie.
 
 ### Diamond
-Left clicking this item will complete the animation and you will see the animated player / entity moving around at a constant speed through the markers.
+Left clicking this item will complete the animation and you will see the animated NPC moving around at a constant speed through the markers.
 
 This will also reset your inventory to its original state.
 

@@ -48,6 +48,20 @@ function read(data, length, socket, state) {
                 packetWriter.play.waypoint.untrack.buffer(socket, socket.waypoints[i], "String")
             }
             socket.waypoints = []
+        } else if (heldItem == "minecraft:gunpowder") {
+            var lastNPC = socket.npcPlayers.pop()
+            if (lastNPC != undefined) {
+                packetWriter.play.remove_entities.buffer(socket, [lastNPC.id])
+                packetWriter.play.system_chat.buffer(socket, nbt.WriteNBT([
+                    nbt.WriteString("text", `Removed ${lastNPC.name} (${lastNPC.frames.length} frames)`),
+                ]), true)
+            }
+        } else if (heldItem == "minecraft:redstone") {
+            packetWriter.play.remove_entities.buffer(socket, socket.npcPlayers.map(npc => npc.id))
+            packetWriter.play.system_chat.buffer(socket, nbt.WriteNBT([
+                nbt.WriteString("text", `Removed ${socket.npcPlayers.length} NPCs`),
+            ]), true)
+            socket.npcPlayers = []
         }
     } else if (socket.playerInventory.selected_inventory == "createPlayer") {
         if (socket.playerInventory.selected_slot_create_player == 36) {
