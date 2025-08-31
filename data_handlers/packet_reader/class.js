@@ -58,7 +58,7 @@ module.exports = {
         null,
         null,
         null,
-        require('./play/37_ping_status').read,
+        require('./play/37_ping_request').read,
         null,
         require('./play/39_player_abilities').read,
         null,

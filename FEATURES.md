@@ -71,7 +71,10 @@ Left clicking with an armor stand in hand will cause all waypoints to be removed
 This will be changed to left click.
 
 ### Diamond
-Left clicking with a diamond in hand will open the player creation menu. See details below.
+Left clicking with a diamond in hand will enter NPC Creation Mode. See details at [#npc-creation](https://github.com/cesars-pizza/Minecraft-Server-JS/blob/main/FEATURES.md#npc-creation).
+
+### Emerald
+Left clicking with an emerald in hand will enter Auto NPC Creation Mode. See details at [#auto-npc-creation](https://github.com/cesars-pizza/Minecraft-Server-JS/blob/main/FEATURES.md#auto-npc-creation).
 
 ### Gunpowder
 Left clicking with gunpowder in hand will remove the last made NPC.

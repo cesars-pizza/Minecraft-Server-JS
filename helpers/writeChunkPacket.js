@@ -6,7 +6,7 @@ function CreatePlatformChunk(x, z, height, size, block, light_level) {
     if (typeof block == 'string') selectedBlockID = registryReader.GetBlockID(block, {})
     else if (typeof block == 'number') selectedBlockID = block
 
-    var blockCounts = Array(384 / 16).fill(256)
+    var blockCounts = Array(384 / 16).fill(4096)
 
     var chunkHeightmap = Array(16).fill(Array(16).fill(height + size + 64))
     var chunkBlocks = Array(384).fill(Array(16).fill(Array(16).fill(0)))

@@ -40,6 +40,7 @@ module.exports = {
         player_info_update: require('./play/63_player_info_update'),
         player_position: require('./play/65_player_position'),
         remove_entities: require('./play/70_remove_entities'),
+        rotate_head: require('./play/76_rotate_head'),
         set_held_slot: require('./play/98_set_held_slot'),
         set_player_inventory: require('./play/101_set_player_inventory'),
         sound: require('./play/110_sound'),

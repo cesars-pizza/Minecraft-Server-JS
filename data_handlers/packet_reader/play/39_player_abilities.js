@@ -14,10 +14,9 @@ function read(data, length, socket, state) {
     socket.playerPos.is_flying = isFlying
 
     if (isFlying) {
-        packetWriter.play.system_chat.buffer(socket, nbt.WriteNBT([
-            nbt.WriteString("type", "text"),
-            nbt.WriteString("text", "You started flying"),
-        ]), false)
+        //packetWriter.play.system_chat.buffer(socket, nbt.WriteNBT([
+        //    nbt.WriteString("text", "You started flying"),
+        //]), false)
     }
 }
 module.exports = {read}

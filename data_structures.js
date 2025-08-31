@@ -21,7 +21,7 @@ class Socket {
      * @param {string[]} waypoints 
      * @param {{marker_entities: bigint[], markers: {x: number, y: number, z: number, pitch: number, yaw: number, distance: number}[], name: string, selected_speed: number, speeds: number[], total_distance: number}} createPlayerSettings 
      * @param {{play_time: number, syncronization_index: number, state: number, raw_frames: {x: number, y: number, z: number, pitch: number, yaw: number}[], marker_entities: bigint[], name: string}} createPlayerAutoSettings 
-     * @param {{frames: {x: number | null, y: number | null, z: number | null, pitch: number | null, yaw: number | null, changedPos: boolean, changedRot: boolean}[], name: string, id: bigint, copies: number[], sync: number}[]} npcPlayers 
+     * @param {{frames: {x: number | null, y: number | null, z: number | null, pitch: number | null, yaw: number | null, teleport: boolean, changedPos: boolean, changedRot: boolean}[], name: string, id: bigint, copies: number[], sync: number}[]} npcPlayers 
      * @param {number[]} npcSync
      * @param {number[]} npcSyncLengths
      */

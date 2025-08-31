@@ -136,16 +136,19 @@ function read(data, length, socket, state) {
                 var copyFrame = socket.npcPlayers[i].copies[j]
                 if (socket.npcPlayers[i].sync >= 0) copyFrame = socket.npcSync[socket.npcPlayers[i].sync]
 
-                if (copyFrame > 0) {
+                if (!thisFrames[copyFrame].teleport) {
                     if (thisFrames[copyFrame].changedRot && thisFrames[copyFrame].changedPos) {
                         packetWriter.play.move_entity_pos_rot.buffer(socket, socket.npcPlayers[i].id, thisFrames[copyFrame].x, thisFrames[copyFrame].y, thisFrames[copyFrame].z, thisFrames[copyFrame].pitch, thisFrames[copyFrame].yaw, false)
+                        packetWriter.play.rotate_head.buffer(socket, socket.npcPlayers[i].id, thisFrames[copyFrame].yaw)
                     } else if (thisFrames[copyFrame].changedPos) {
                         packetWriter.play.move_entity_pos.buffer(socket, socket.npcPlayers[i].id, thisFrames[copyFrame].x, thisFrames[copyFrame].y, thisFrames[copyFrame].z, false)
                     } else if (thisFrames[copyFrame].changedRot) {
-                        packetWriter.play.move_entity_pos_rot.buffer(socket, socket.npcPlayers[i].id, thisFrames[copyFrame].pitch, thisFrames[copyFrame].yaw, false)
+                        packetWriter.play.move_entity_rot.buffer(socket, socket.npcPlayers[i].id, thisFrames[copyFrame].pitch, thisFrames[copyFrame].yaw, false)
+                        packetWriter.play.rotate_head.buffer(socket, socket.npcPlayers[i].id, thisFrames[copyFrame].yaw)
                     }
                 } else {
                     packetWriter.play.entity_position_sync.buffer(socket, socket.npcPlayers[i].id, thisFrames[copyFrame], {x: 0, y: 0, z: 0}, thisFrames[copyFrame])
+                    packetWriter.play.rotate_head.buffer(socket, socket.npcPlayers[i].id, thisFrames[copyFrame].yaw)
                 }
             }
         }

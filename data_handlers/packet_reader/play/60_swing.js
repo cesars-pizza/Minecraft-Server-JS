@@ -399,32 +399,46 @@ function read(data, length, socket, state) {
                     if (prevRawFrame == -1) prevRawFrame = rawFrames.length - 1
                     prevRawFrame = rawFrames[prevRawFrame]
 
-                    var changedX = rawFrames[i].x != prevRawFrame.x
-                    var changedY = rawFrames[i].y != prevRawFrame.y
-                    var changedZ = rawFrames[i].z != prevRawFrame.z
-                    var changedPitch = rawFrames[i].pitch != prevRawFrame.pitch
-                    var changedYaw = rawFrames[i].yaw != prevRawFrame.yaw
+                    var difX = rawFrames[i].x - prevRawFrame.x
+                    var difY = rawFrames[i].y - prevRawFrame.y
+                    var difZ = rawFrames[i].z - prevRawFrame.z
+                    var difPitch = rawFrames[i].pitch - prevRawFrame.pitch
+                    var difYaw = rawFrames[i].yaw - prevRawFrame.yaw
 
-                    var changedPos = changedX || changedY || changedZ
-                    var changedRot = changedPitch || changedYaw
+                    var teleportX = difX > 7.999755859375 || difX < -8
+                    var teleportY = difX > 7.999755859375 || difX < -8
+                    var teleportZ = difX > 7.999755859375 || difX < -8
+
+                    var teleport = i == 0 || teleportX || teleportY || teleportZ
+                    var changedPos = (difX != 0) || (difY != 0) || (difZ != 0)
+                    var changedRot = (difPitch != 0) || (difYaw != 0)
 
                     var thisFrame = {
+                        teleport: teleport,
                         changedPos: changedPos,
                         changedRot: changedRot
                     }
-                    if (changedPos) {
-                        thisFrame.x = Math.round(rawFrames[i].x * 4096 - prevRawFrame.x * 4096)
-                        thisFrame.y = Math.round(rawFrames[i].y * 4096 - prevRawFrame.y * 4096)
-                        thisFrame.z = Math.round(rawFrames[i].z * 4096 - prevRawFrame.z * 4096)
-                    }
-                    if (changedRot) {
+
+                    if (teleport) {
+                        thisFrame.x = rawFrames[i].x
+                        thisFrame.y = rawFrames[i].y
+                        thisFrame.z = rawFrames[i].z
                         thisFrame.pitch = rawFrames[i].pitch
                         thisFrame.yaw = rawFrames[i].yaw
+                    } else {
+                        if (changedPos) {
+                            thisFrame.x = Math.round(rawFrames[i].x * 4096 - prevRawFrame.x * 4096)
+                            thisFrame.y = Math.round(rawFrames[i].y * 4096 - prevRawFrame.y * 4096)
+                            thisFrame.z = Math.round(rawFrames[i].z * 4096 - prevRawFrame.z * 4096)
+                        }
+                        if (changedRot) {
+                            thisFrame.pitch = rawFrames[i].pitch
+                            thisFrame.yaw = rawFrames[i].yaw
+                        }
                     }
 
                     frames.push(thisFrame)
                 }
-                frames[0] = rawFrames[0]
 
                 socket.npcPlayers.push({
                     frames: frames,
@@ -455,9 +469,6 @@ function read(data, length, socket, state) {
                     packetWriter.play.add_entity.buffer(socket, socket.tick, `OfflinePlayer:${socket.createPlayerAutoSettings.name}`, 149, rawFrames[currentFrame].x, rawFrames[currentFrame].y, rawFrames[currentFrame].z, rawFrames[currentFrame].pitch, rawFrames[currentFrame].yaw, rawFrames[currentFrame].yaw, 0, 0, 0, 0)
                 } else {
                     packetWriter.play.add_entity.buffer(socket, socket.tick, socket.tick, selectedEntity, rawFrames[currentFrame].x, rawFrames[currentFrame].y, rawFrames[currentFrame].z, rawFrames[currentFrame].pitch, rawFrames[currentFrame].yaw, rawFrames[currentFrame].yaw, 0, 0, 0, 0)
-                    packetWriter.play.system_chat.buffer(socket, nbt.WriteNBT([
-                        nbt.WriteString("text", `(${rawFrames[currentFrame].x}, ${rawFrames[currentFrame].y}, ${rawFrames[currentFrame].z})`)
-                    ]))
                 }
             }
         }
