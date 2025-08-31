@@ -9,5 +9,6 @@ function read(data, length, socket, state) {
 
     if (socket.playerInventory.selected_inventory == "main") socket.playerInventory.selected_slot = slot + 36
     else if (socket.playerInventory.selected_inventory == "createPlayer") socket.playerInventory.selected_slot_create_player = slot + 36
+    else if (socket.playerInventory.selected_inventory == "createPlayerAuto") socket.playerInventory.selected_slot_create_player_auto = slot + 36
 }
 module.exports = {read}

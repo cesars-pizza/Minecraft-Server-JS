@@ -29,6 +29,20 @@ function read(data, length, socket, state) {
             socket.playerInventory.slots[slot.value] = itemID
             socket.playerInventory.slot_counts[slot.value] = clickedItem.value.count
         }
+    } else if (socket.playerInventory.selected_inventory == "createPlayerAuto") {
+        if (slot.value == 36) packetWriter.play.set_player_inventory.buffer(socket, 0, Number(socket.createPlayerAutoSettings.state == 0), "minecraft:honeycomb")
+        else if (slot.value == 37) packetWriter.play.set_player_inventory.buffer(socket, 1, Number(socket.createPlayerAutoSettings.state == 0), "minecraft:stick")
+        else if (slot.value == 38) packetWriter.play.set_player_inventory.buffer(socket, 2, 0, null)
+        else if (slot.value == 39) packetWriter.play.set_player_inventory.buffer(socket, 3, Number(socket.createPlayerAutoSettings.state > 0), "minecraft:lava_bucket")
+        else if (slot.value == 40) packetWriter.play.set_player_inventory.buffer(socket, 4, 1, "minecraft:tnt")
+        else if (slot.value == 41) packetWriter.play.set_player_inventory.buffer(socket, 5, 0, null)
+        else if (slot.value == 42) packetWriter.play.set_player_inventory.buffer(socket, 6, 0, null)
+        else if (slot.value == 43) packetWriter.play.set_player_inventory.buffer(socket, 7, Number(socket.createPlayerAutoSettings.state != 1), "minecraft:name_tag")
+        else if (slot.value == 44) packetWriter.play.set_player_inventory.buffer(socket, 8, Number(socket.createPlayerAutoSettings.state == 2), "minecraft:emerald")
+        else {
+            socket.playerInventory.slots[slot.value] = itemID
+            socket.playerInventory.slot_counts[slot.value] = clickedItem.value.count
+        }
     }
 }
 module.exports = {read}

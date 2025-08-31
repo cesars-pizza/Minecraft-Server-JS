@@ -42,6 +42,7 @@ module.exports = {
         remove_entities: require('./play/70_remove_entities'),
         set_held_slot: require('./play/98_set_held_slot'),
         set_player_inventory: require('./play/101_set_player_inventory'),
+        sound: require('./play/110_sound'),
         system_chat: require('./play/114_system_chat'),
         transfer: require('./play/122_transfer'),
         waypoint: {

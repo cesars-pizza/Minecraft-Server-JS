@@ -55,15 +55,88 @@ function read(data, length, socket, state) {
         }
     }
 
+    if (socket.playerInventory.selected_inventory == "createPlayerAuto" && socket.createPlayerAutoSettings.state > 0) {
+        if (socket.createPlayerAutoSettings.state == 1) {
+            socket.createPlayerAutoSettings.play_time++
+            if (socket.createPlayerAutoSettings.syncronization_index >= 0 && socket.createPlayerAutoSettings.play_time <= 0) socket.npcSync[socket.createPlayerAutoSettings.syncronization_index] = -1
+
+            if (socket.createPlayerAutoSettings.play_time == 0) {
+                packetWriter.play.sound.buffer(socket, 534, "master", socket.playerPos, 1, 1.15, Math.floor(Math.random() * 10000))
+                packetWriter.play.system_chat.buffer(socket, nbt.WriteNBT([
+                    nbt.WriteString("text", `GO`)
+                ]), true)
+
+                packetWriter.play.add_entity.buffer(socket, socket.tick, socket.tick, 145, socket.playerPos.x, socket.playerPos.y, socket.playerPos.z, socket.playerPos.pitch, socket.playerPos.yaw, socket.playerPos.yaw, 0, 0, 0, 0)
+                socket.createPlayerAutoSettings.marker_entities.push(socket.tick)
+            }
+
+            if (socket.createPlayerAutoSettings.play_time >= 0) {
+                if (socket.createPlayerAutoSettings.syncronization_index < 0 || socket.createPlayerAutoSettings.play_time < socket.npcSyncLengths[socket.createPlayerAutoSettings.syncronization_index]) {
+                    socket.createPlayerAutoSettings.raw_frames.push({
+                        x: socket.playerPos.x,
+                        y: socket.playerPos.y,
+                        z: socket.playerPos.z,
+                        pitch: socket.playerPos.pitch,
+                        yaw: socket.playerPos.yaw
+                    })
+
+                    if (socket.createPlayerAutoSettings.play_time % 20 == 0 && socket.createPlayerAutoSettings.play_time != 0) {
+                        var seconds = 0
+                        var minutes = 0
+                        if (socket.createPlayerAutoSettings.syncronization_index >= 0) {
+                            var ticksLeft = socket.npcSyncLengths[socket.createPlayerAutoSettings.syncronization_index] - socket.createPlayerAutoSettings.play_time
+                            seconds = (ticksLeft % 1200) / 20
+                            minutes = Math.floor(ticksLeft / 1200)
+                        } else {
+                            seconds = (socket.createPlayerAutoSettings.play_time % 1200) / 20
+                            minutes = Math.floor(socket.createPlayerAutoSettings.play_time / 1200)
+                        }
+
+                        if (minutes > 0) packetWriter.play.system_chat.buffer(socket, nbt.WriteNBT([
+                            nbt.WriteString("text", `${minutes}:${seconds.toString().padStart(2, "0")}`)
+                        ]), true)
+                        else packetWriter.play.system_chat.buffer(socket, nbt.WriteNBT([
+                            nbt.WriteString("text", seconds.toString())
+                        ]), true)
+                    }
+                }
+            }
+            else if ((socket.createPlayerAutoSettings.play_time * -1) % 20 == 0) {
+                packetWriter.play.sound.buffer(socket, 534, "master", socket.playerPos, 1, 1, Math.floor(Math.random() * 10000))
+                packetWriter.play.system_chat.buffer(socket, nbt.WriteNBT([
+                    nbt.WriteString("text", `${socket.createPlayerAutoSettings.play_time * -0.05}...`)
+                ]), true)
+            }
+
+            if (socket.createPlayerAutoSettings.syncronization_index >= 0 && socket.createPlayerAutoSettings.play_time == socket.npcSyncLengths[socket.createPlayerAutoSettings.syncronization_index]) {
+                socket.createPlayerAutoSettings.state = 2
+
+                packetWriter.play.set_player_inventory.buffer(socket, 7, 1, "minecraft:name_tag")
+                packetWriter.play.set_player_inventory.buffer(socket, 8, 1, "minecraft:emerald")
+
+                packetWriter.play.sound.buffer(socket, 534, "master", socket.playerPos, 1, 1.15, Math.floor(Math.random() * 10000))
+
+                packetWriter.play.add_entity.buffer(socket, socket.tick, socket.tick, 145, socket.playerPos.x, socket.playerPos.y, socket.playerPos.z, socket.playerPos.pitch, socket.playerPos.yaw, socket.playerPos.yaw, 0, 0, 0, 0)
+                socket.createPlayerAutoSettings.marker_entities.push(socket.tick)
+            }
+        }
+    }
+
+    for (var i = 0; i < socket.npcSync.length; i++) {
+        socket.npcSync[i]++
+        if (socket.npcSync[i] >= socket.npcSyncLengths[i]) { socket.npcSync[i] = 0 }
+    }
+
     for (var i = 0; i < socket.npcPlayers.length; i++) {
         if (socket.npcPlayers[i].frames.length > 1) {
             var thisFrames = socket.npcPlayers[i].frames
             for (var j = 0; j < socket.npcPlayers[i].copies.length; j++) {
-                socket.npcPlayers[i].copies[j]++
+                if (socket.npcPlayers[i].sync < 0) socket.npcPlayers[i].copies[j]++
                 if (socket.npcPlayers[i].copies[j] == thisFrames.length) socket.npcPlayers[i].copies[j] = 0
                 var copyFrame = socket.npcPlayers[i].copies[j]
+                if (socket.npcPlayers[i].sync >= 0) copyFrame = socket.npcSync[socket.npcPlayers[i].sync]
 
-                if (socket.npcPlayers[i].copies[j] > 0) {
+                if (copyFrame > 0) {
                     if (thisFrames[copyFrame].changedRot && thisFrames[copyFrame].changedPos) {
                         packetWriter.play.move_entity_pos_rot.buffer(socket, socket.npcPlayers[i].id, thisFrames[copyFrame].x, thisFrames[copyFrame].y, thisFrames[copyFrame].z, thisFrames[copyFrame].pitch, thisFrames[copyFrame].yaw, false)
                     } else if (thisFrames[copyFrame].changedPos) {

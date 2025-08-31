@@ -25,20 +25,39 @@ function read(data, length, socket, state) {
             socket.createPlayerSettings.name = fullText
 
             packetWriter.play.system_chat.buffer(socket, nbt.WriteNBT([
-                nbt.WriteString("type", "text"),
-                nbt.WriteString("text", `Set player name to ${fullText}`),
+                nbt.WriteString("text", `Set NPC to Player ${fullText}`),
             ]), true)
         } else if (entityText != undefined) {
             socket.createPlayerSettings.name = fullText
 
             packetWriter.play.system_chat.buffer(socket, nbt.WriteNBT([
-                nbt.WriteString("type", "text"),
-                nbt.WriteString("text", `Set to entity ${fullText}`),
+                nbt.WriteString("text", `Set NPC to Entity ${fullText}`),
             ]), true)
         } else if (fullText.length > 16) {
             packetWriter.play.system_chat.buffer(socket, nbt.WriteNBT([
-                nbt.WriteString("type", "text"),
-                nbt.WriteString("text", `Player name too long: ${fullText} (max 16 chars.)`),
+                nbt.WriteString("text", `NPC Name Too Long: ${fullText} (Max 16 Chars.)`),
+            ]), true)
+        }
+    } else if (socket.playerInventory.selected_inventory == "createPlayerAuto") {
+        packetWriter.play.block_update.buffer(socket, location.value.x, location.value.y, location.value.z, 0)
+
+        var fullText = line1.value.concat(line2.value, line3.value, line4.value)
+        var entityText = registryReader.getEntityTypeID(fullText)
+        if (fullText != "" && entityText == undefined && fullText.length <= 16) {
+            socket.createPlayerAutoSettings.name = fullText
+
+            packetWriter.play.system_chat.buffer(socket, nbt.WriteNBT([
+                nbt.WriteString("text", `Set NPC to Player ${fullText}`),
+            ]), true)
+        } else if (entityText != undefined) {
+            socket.createPlayerAutoSettings.name = fullText
+
+            packetWriter.play.system_chat.buffer(socket, nbt.WriteNBT([
+                nbt.WriteString("text", `Set NPC to Entity ${fullText}`),
+            ]), true)
+        } else if (fullText.length > 16) {
+            packetWriter.play.system_chat.buffer(socket, nbt.WriteNBT([
+                nbt.WriteString("text", `NPC Name Too Long: ${fullText} (Max 16 Chars.)`),
             ]), true)
         }
     }

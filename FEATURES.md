@@ -79,7 +79,7 @@ Left clicking with gunpowder in hand will remove the last made NPC.
 ### Redstone Dust
 Left clicking with redstone dust in hand will remove all NPCs.
 
-## Player Creation
+## NPC Creation
 
 ### General
 Left clicking with a diamond in hand will enter NPC creation mode. It will replace all items in the hotbar with 7 items for NPC creation.
@@ -125,6 +125,49 @@ If there are 0 animation markers, it will spawn an unmoving statue at the player
 If there is 1 animation marker or multiple animation markers within a small enough distance, it will spawn an unmoving marker at the position of the first marker.
 
 This will also reset your inventory to its original state.
+
+## Auto NPC Creation
+
+### General
+This is similar to regular NPC Creation but instead of recording individual animation markers and playing them at a constant speed in blocks per second, it records the player's position and rotation every tick and plays it back.
+
+It is activated by left clicking with an emerald.
+
+### Honeycomb
+Left clicking cycles the syncronization channel of the animation. This is used to align multiple NPCs frames to simulate interaction.
+
+By default it is set to not syncronize
+
+### Stick
+Left clicking starts a 3 second countdown to start recording the animation. Upon the text "GO", a zombie will spawn at the player's position as a marker of where to loop back to at the end of the animation.
+
+A counter will show how much time has passed if not syncronized, and it will show how much time is left if it is syncronized
+
+All other NPCs that it is syncronized to will pause on their first frame during the countdown and will playback syncronized to the recording.
+
+If the NPC is not syncronized, the recording can be stopped by left clicking with the stick again. If it is, the recording will stop when the counter reaches 0.
+
+### Lava Bucket
+During or after recording, the lava bucket will appear.
+
+Left clicking it will remove the existing recording and allow it to be re-recorded.
+
+All other settings such as syncronization and name are preserved.
+
+### TNT
+Left clicking the TNT will exit Auto NPC Creation Mode and set the hotbar to its previous state.
+
+This resets all settings for the next time an NPC is created.
+
+### Name Tag
+This works exactly as in regular NPC Creation Mode.
+
+Is only available before or after recording.
+
+### Emerald
+Creates the NPC and exits Auto NPC Creation Mode.
+
+If syncronized, it will spawn at the frame of the syncronization instead of the first frame.
 
 ## Debug
 

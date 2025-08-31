@@ -2,7 +2,7 @@ const { Socket } = require("../../../data_structures")
 const writer = require("../../data_writer")
 
 /**
- * @param {Number} entityID 
+ * @param {Number | bigint} entityID 
  * @param {bigint | number | string} entityUUID 
  * @param {number} type 
  * @param {number} x 
@@ -22,7 +22,7 @@ function write(socket, entityID, entityUUID, type, x, y, z, pitch, yaw, headYaw,
 }
 
 /**
- * @param {Number} entityID 
+ * @param {Number | bigint} entityID 
  * @param {bigint | number | string} entityUUID 
  * @param {number} type 
  * @param {number} x 
@@ -43,7 +43,7 @@ function buffer(socket, entityID, entityUUID, type, x, y, z, pitch, yaw, headYaw
 
 function get(entityID, entityUUID, type, x, y, z, pitch, yaw, headYaw, data, velocityX, velocityY, velocityZ) {
     return writer.WriteVarInt(entityID).concat(
-        (typeof(entityUUID) == "bigint") ? writer.WriteUUID(entityUUID) : writer.WriteUUIDv3(entityUUID),
+        (typeof(entityUUID) == "string") ? writer.WriteUUIDv3(entityUUID) : writer.WriteUUID(entityUUID),
         writer.WriteVarInt(type),
         writer.WriteDouble(x),
         writer.WriteDouble(y),

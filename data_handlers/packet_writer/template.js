@@ -1,4 +1,4 @@
-const { Socket } = require("../../data_structures")
+const { Socket } = require("../../../data_structures")
 const writer = require("../../data_writer")
 
 var id = 0

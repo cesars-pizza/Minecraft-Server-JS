@@ -71,7 +71,8 @@ const server = net.createServer((socket) => {
         slot_counts: [],
         selected_slot: 36,
         selected_inventory: "main",
-        selected_slot_player_creation: 36
+        selected_slot_player_creation: 36,
+        selected_slot_player_creation_auto: 36,
     }
     socket.bufferedPackets = []
     socket.loadAll = {
@@ -97,7 +98,17 @@ const server = net.createServer((socket) => {
         speeds: [16, 32, 64, 128, 0.25, 0.5, 1, 2, 4, 8],
         total_distance: 0
     },
+    socket.createPlayerAutoSettings = {
+        play_time: -61,
+        syncronization_index: -2,
+        state: 0,
+        raw_frames: [],
+        marker_entities: [],
+        name: "minecraft:zombie"
+    }
     socket.npcPlayers = []
+    socket.npcSync = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    socket.npcSyncLengths = [600, 600, 1200, 1200, 2400, 2400, 6000, 6000, 12000, 12000]
 
     socket.on('data', (data) => {
         ReadPacket(socket, data)

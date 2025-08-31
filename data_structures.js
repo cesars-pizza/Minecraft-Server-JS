@@ -12,7 +12,7 @@ class Socket {
      * @param {() => void} writeBufferedPackets 
      * @param {(state: "handshaking" | "status" | "login" | "configuration" | "play") => void} setState 
      * @param {{x: number, y: number, z: number, pitch: number, yaw: number, on_ground: boolean, against_wall: boolean, is_flying: boolean}} playerPos 
-     * @param {{slots: number[], slot_counts: number[], selected_slot: number, selected_inventory: "main" | "createPlayer", selected_slot_player_creation: number}} playerInventory 
+     * @param {{slots: number[], slot_counts: number[], selected_slot: number, selected_inventory: "main" | "createPlayer" | "createPlayerAuto", selected_slot_player_creation: number, selected_slot_player_creation_auto: number}} playerInventory 
      * @param {{empty: boolean, id: number, identifier: string, logBytes: boolean, consoleLog: boolean}[]} bufferedPackets 
      * @param {{enabled: boolean, loadSize: number, chunkZ: number}} loadAll 
      * @param {boolean[][]} loadedChunks 
@@ -20,9 +20,12 @@ class Socket {
      * @param {(x: number, z: number) => boolean} getChunkLoaded 
      * @param {string[]} waypoints 
      * @param {{marker_entities: bigint[], markers: {x: number, y: number, z: number, pitch: number, yaw: number, distance: number}[], name: string, selected_speed: number, speeds: number[], total_distance: number}} createPlayerSettings 
-     * @param {{frames: {x: number | null, y: number | null, z: number | null, pitch: number | null, yaw: number | null, changedPos: boolean, changedRot: boolean}[], name: string, id: bigint, copies: number[]}[]} npcPlayers 
+     * @param {{play_time: number, syncronization_index: number, state: number, raw_frames: {x: number, y: number, z: number, pitch: number, yaw: number}[], marker_entities: bigint[], name: string}} createPlayerAutoSettings 
+     * @param {{frames: {x: number | null, y: number | null, z: number | null, pitch: number | null, yaw: number | null, changedPos: boolean, changedRot: boolean}[], name: string, id: bigint, copies: number[], sync: number}[]} npcPlayers 
+     * @param {number[]} npcSync
+     * @param {number[]} npcSyncLengths
      */
-    constructor(state, tick, logText, index, log, writePacket, writeEmptyPacket, bufferPacket, bufferEmptyPacket, writeBufferedPackets, setState, playerPos, playerInventory, bufferedPackets, loadAll, loadedChunks, markLoadedChunk, getChunkLoaded, waypoints, createPlayerSettings, npcPlayers) {
+    constructor(state, tick, logText, index, log, writePacket, writeEmptyPacket, bufferPacket, bufferEmptyPacket, writeBufferedPackets, setState, playerPos, playerInventory, bufferedPackets, loadAll, loadedChunks, markLoadedChunk, getChunkLoaded, waypoints, createPlayerSettings, createPlayerAutoSettings, npcPlayers, npcSync, npcSyncLengths) {
         this.state = state
         this.tick = tick
         this.logText = logText
@@ -43,7 +46,10 @@ class Socket {
         this.getChunkLoaded = getChunkLoaded
         this.waypoints = waypoints
         this.createPlayerSettings = createPlayerSettings
+        this.createPlayerAutoSettings = createPlayerAutoSettings
         this.npcPlayers = npcPlayers
+        this.npcSync = npcSync
+        this.npcSyncLengths = npcSyncLengths
     }
 }
 
