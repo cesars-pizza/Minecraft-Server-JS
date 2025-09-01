@@ -61,7 +61,7 @@ module.exports = {
         require('./play/37_ping_request').read,
         null,
         require('./play/39_player_abilities').read,
-        null,
+        require('./play/40_player_action').read,
         require('./play/41_player_command').read,
         require('./play/42_player_input').read,
         require('./play/43_player_loaded').read,
@@ -85,7 +85,7 @@ module.exports = {
         null,
         null,
         require('./play/63_use_item_on').read,
-        null,
+        require('./play/64_use_item').read,
         null,
     ],
     status: [

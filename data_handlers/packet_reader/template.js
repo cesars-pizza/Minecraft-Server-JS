@@ -1,5 +1,5 @@
 const reader = require('../../data_reader.js')
-const { Socket } = require('../../data_structures.js')
+const { Socket } = require('../../../data_structures.js')
 const packetWriter = require('../../packet_writer/class.js')
 
 /** @param {Socket} socket  */

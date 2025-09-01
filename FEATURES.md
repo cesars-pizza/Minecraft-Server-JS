@@ -63,40 +63,38 @@ This block placing feature has been extended to a few items as well:
 ## Item Actions
 
 ### Name Tag
-Left clicking with a name tag in hand will cause a waypoint to be added at the players position.
+Right clicking with a name tag in hand will cause a waypoint to be added at the players position.
 
 ### Armor Stand
-Left clicking with an armor stand in hand will cause all waypoints to be removed.
-
-This will be changed to left click.
+Right clicking with an armor stand in hand will cause all waypoints to be removed.
 
 ### Diamond
-Left clicking with a diamond in hand will enter NPC Creation Mode. See details at [#npc-creation](https://github.com/cesars-pizza/Minecraft-Server-JS/blob/main/FEATURES.md#npc-creation).
+RIght clicking with a diamond in hand will enter NPC Creation Mode. See details at [#npc-creation](https://github.com/cesars-pizza/Minecraft-Server-JS/blob/main/FEATURES.md#npc-creation).
 
 ### Emerald
-Left clicking with an emerald in hand will enter Auto NPC Creation Mode. See details at [#auto-npc-creation](https://github.com/cesars-pizza/Minecraft-Server-JS/blob/main/FEATURES.md#auto-npc-creation).
+Right clicking with an emerald in hand will enter Auto NPC Creation Mode. See details at [#auto-npc-creation](https://github.com/cesars-pizza/Minecraft-Server-JS/blob/main/FEATURES.md#auto-npc-creation).
 
 ### Gunpowder
-Left clicking with gunpowder in hand will remove the last made NPC.
+Right clicking with gunpowder in hand will remove the last made NPC.
 
 ### Redstone Dust
-Left clicking with redstone dust in hand will remove all NPCs.
+Right clicking with redstone dust in hand will remove all NPCs.
 
 ## NPC Creation
 
 ### General
-Left clicking with a diamond in hand will enter NPC creation mode. It will replace all items in the hotbar with 7 items for NPC creation.
+Right clicking with a diamond in hand will enter NPC creation mode. It will replace all items in the hotbar with 7 items for NPC creation.
 
 Trying to replace the items in your hotbar while in NPC creation mode will simply replace them again with the items for NPC creation.
 
 ### Stick
-Left clicking this item will cause an armor stand to appear at the players position. This is an animation marker.
+Right clicking this item will cause an armor stand to appear at the players position. This is an animation marker.
 
-### Flint and Steel
-Left clicking this item will remove the last animation marker.
+### Gunpowder
+Right clicking this item will remove the last animation marker.
 
-### Lava Bucket
-Left clicking this item will remove all animation markers, but will preserve all other settings as they are.
+### Redstone Dust
+Right clicking this item will remove all animation markers, but will preserve all other settings as they are.
 
 ### TNT
 This will exit player creation mode. All animation markers will be removed and all other settings reset to their default state for the next time player creation mode is entered.
@@ -104,12 +102,12 @@ This will exit player creation mode. All animation markers will be removed and a
 This will also reset the hotbar to its original state before player creation mode was entered.
 
 ### Clock
-Left clicking this item will cycle between animation speeds ranging from 0.25 to 128 and defaulting at 16
+Right clicking this item will cycle between animation speeds ranging from 0.25 to 128 and defaulting at 16
 
 The selected speed is displayed in the actionbar for a couple seconds before fading away.
 
 ### Name Tag
-Left clicking this item will open a sign editor screen. This is used to rename the NPC that is spawned.
+Right clicking this item will open a sign editor screen. This is used to rename the NPC that is spawned.
 
 If the name is set to the identifier of an entity of than the player (eg. minecraft:pig) it will spawn that entity instead of a player with that name.
 See [Minecraft Wiki - Java edition data values](https://minecraft.wiki/w/Java_Edition_data_values#Entities) for a list of entity identifiers without the "minecraft:" prefix.
@@ -121,7 +119,7 @@ Exiting the sign menu sets the name to whatever is typed into the sign. If the s
 The default name is minecraft:zombie.
 
 ### Diamond
-Left clicking this item will complete the animation and you will see the animated NPC moving around at a constant speed through the markers.
+Right clicking this item will complete the animation and you will see the animated NPC moving around at a constant speed through the markers.
 
 If there are 0 animation markers, it will spawn an unmoving statue at the player's position
 
@@ -134,31 +132,31 @@ This will also reset your inventory to its original state.
 ### General
 This is similar to regular NPC Creation but instead of recording individual animation markers and playing them at a constant speed in blocks per second, it records the player's position and rotation every tick and plays it back.
 
-It is activated by left clicking with an emerald.
+It is activated by right clicking with an emerald.
 
 ### Honeycomb
-Left clicking cycles the syncronization channel of the animation. This is used to align multiple NPCs frames to simulate interaction.
+Right clicking cycles the syncronization channel of the animation. This is used to align multiple NPCs frames to simulate interaction.
 
 By default it is set to not syncronize
 
 ### Stick
-Left clicking starts a 3 second countdown to start recording the animation. Upon the text "GO", a zombie will spawn at the player's position as a marker of where to loop back to at the end of the animation.
+Right clicking starts a 3 second countdown to start recording the animation. Upon the text "GO", a zombie will spawn at the player's position as a marker of where to loop back to at the end of the animation.
 
 A counter will show how much time has passed if not syncronized, and it will show how much time is left if it is syncronized
 
 All other NPCs that it is syncronized to will pause on their first frame during the countdown and will playback syncronized to the recording.
 
-If the NPC is not syncronized, the recording can be stopped by left clicking with the stick again. If it is, the recording will stop when the counter reaches 0.
+If the NPC is not syncronized, the recording can be stopped by right clicking with the stick again after the countdown. If it is, the recording will stop when the counter reaches 0.
 
-### Lava Bucket
+### Redstone Dust
 During or after recording, the lava bucket will appear.
 
-Left clicking it will remove the existing recording and allow it to be re-recorded.
+Right clicking it will remove the existing recording and allow it to be re-recorded.
 
 All other settings such as syncronization and name are preserved.
 
 ### TNT
-Left clicking the TNT will exit Auto NPC Creation Mode and set the hotbar to its previous state.
+Right clicking the TNT will exit Auto NPC Creation Mode and set the hotbar to its previous state.
 
 This resets all settings for the next time an NPC is created.
 
@@ -173,9 +171,6 @@ Creates the NPC and exits Auto NPC Creation Mode.
 If syncronized, it will spawn at the frame of the syncronization instead of the first frame.
 
 ## Debug
-
-### General
-Any time the player flies, the text "You started flying" will be displayed in chat
 
 ### Terminal
 Select packets that are recieved and written are logged to the terminal as well as initial information about loaded registries.
